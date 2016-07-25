@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,32 +16,55 @@
 </head>
 
 <%
-    String loginUserName = (String) session.getAttribute("userName");
+    String s_user = (String) session.getAttribute("sessionUserName");
 %>
+
+<c:set var="s_user" value="<%=s_user%>"/>
+
+<c:if test="${empty s_user}">
+    <c:redirect url="/login.do"/>
+</c:if>
 
 <body>
 <div class="container">
     <div class="header">
         <ul class="nav nav-pills pull-right">
-            <li class="active"><a href="/view/main.jsp">Home</a></li>
-            <li><a href="#">글목록</a></li>
-            <% if (loginUserName != null) {%>
-            <li><a href="/logout.do">로그아웃</a></li>
-            <%}%>
+            <li class="active"><a href="/main.do">Home</a></li>
+            <li><a href="/board.do">글목록</a></li>
+            <c:if test="${not empty s_user}">
+                <li><a href="/logout.do">로그아웃</a></li>
+            </c:if>
         </ul>
         <h3 class="text-muted">메인</h3>
     </div>
 
     <div class="form-group">
-        <%
-            if (loginUserName == null) {
-                response.sendRedirect("/login.do");
-            }
-        %>
-
-        <%=loginUserName%>님 로그인중
+        <c:if test="${empty s_user}">
+            <c:redirect url="/login.do"/>
+        </c:if>
+        ${s_user}님 안녕하세요
     </div>
 
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>이름</th>
+            <th>비..밀번호....</th>
+        </tr>
+        </thead>
+        <tbody>
+        <c:forEach items="${userList}" var="list">
+            <tr>
+                <td></td>
+                <td>${list.username}</td>
+                <td>${list.userpassword}</td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
+    <button type="submit" class="btn btn-default">Submit</button>
+    <input type="button" class="btn btn-default" onclick="location.href='/write.do'"; >글쓰기</input>
 </div> <!-- /container -->
 <script src="/resources/assets/js/jquery.js"></script>
 <script src="/resources/js/bootstrap.min.js"></script>

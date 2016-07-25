@@ -18,7 +18,7 @@
     <div class="container">
         <div class="header">
             <ul class="nav nav-pills pull-right">
-                <li class="active"><a href="/view/main.jsp">Home</a></li>
+                <li class="active"><a href="/main.do">Home</a></li>
             </ul>
             <h3 class="text-muted">회원 가입</h3>
         </div>

@@ -1,24 +1,29 @@
-package example;
+package helljava.contollers;
 
+import helljava.domain.User;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * Created by yongjunjung on 2016. 7. 18..
  */
-public class LogoutServlet extends HttpServlet {
+public class MainController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        HttpSession session = request.getSession();
-        session.invalidate();
+        ArrayList<User> userList = User.userList;
 
-        response.sendRedirect("/main.do");
+        request.setAttribute("userList", userList);
 
+        RequestDispatcher view = request.getRequestDispatcher("/view/main.jsp");
+        view.forward(request,response);
     }
 }
