@@ -71,7 +71,7 @@
                 <tr>
                     <td>${list.seq}</td>
                     <td>${list.username}</td>
-                    <td>${list.title}</td>
+                    <td><a href="/boardDet.do?seq=${list.seq}">${list.title}</td>
                     <td>${list.content}</td>
                 </tr>
             </c:forEach>

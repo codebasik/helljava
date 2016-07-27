@@ -18,47 +18,34 @@ public class BoardRepository {
     }
 
     public List<Board> findAll(String searchWord) {
-
-        List<Board> boardList = MemoryDB.boardList;
-
-        List<Board> collect = boardList.stream()
+        return MemoryDB.boardList.stream()
                 .filter(b -> searchWord == null || b.getContent().contains(searchWord) || b.getUsername().contains(searchWord) || b.getTitle().contains(searchWord) || "".equals(searchWord))
                 .collect(Collectors.toList());
-
-        return collect;
     }
 
     public List<Board> findbyContent(String searchWord) {
-
-        ArrayList<Board> boardList = MemoryDB.boardList;
-
-        List<Board> collect = boardList.stream()
+        return MemoryDB.boardList.stream()
                 .filter(b -> b.getContent().contains(searchWord))
                 .collect(Collectors.toList());
-
-        return collect;
     }
 
     public List<Board> findbyName(String searchWord) {
-
-        ArrayList<Board> boardList = MemoryDB.boardList;
-
-        List<Board> collect = boardList.stream()
+        return MemoryDB.boardList.stream()
                 .filter(b -> b.getUsername().contains(searchWord))
                 .collect(Collectors.toList());
-
-        return collect;
     }
 
     public List<Board> findbyTitle(String searchWord) {
-
-        ArrayList<Board> boardList = MemoryDB.boardList;
-
-        List<Board> collect = boardList.stream()
+        return MemoryDB.boardList.stream()
                 .filter(b -> b.getTitle().contains(searchWord))
                 .collect(Collectors.toList());
+    }
 
-        return collect;
+    public Board findbySeq(int seq) {
+        return MemoryDB.boardList.stream()
+                .filter(b -> b.getSeq() == seq)
+                .findFirst()
+                .orElse(null);
     }
 
     public int findByMaxSeq() {

@@ -42,4 +42,5 @@ public class BoardService {
         boardRepository.write(userName, title, content);
     }
 
+
 }

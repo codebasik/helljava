@@ -125,6 +125,15 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>boardDet</servlet-name>
+        <servlet-class>helljava.web.BoardDetailController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>boardDet</servlet-name>
+        <url-pattern>/boardDet.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>write</servlet-name>
         <servlet-class>helljava.web.WriteController</servlet-class>
     </servlet>
