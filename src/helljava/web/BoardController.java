@@ -1,5 +1,6 @@
 package helljava.web;
 
+import helljava.DB.MemoryDB;
 import helljava.domain.Board;
 import helljava.service.BoardService;
 
@@ -24,8 +25,15 @@ public class BoardController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        request.setCharacterEncoding("UTF-8");
+
         String searchWord = request.getParameter("searchWord");
         String queryInput = request.getParameter("queryInput");
+
+        ArrayList<Board> list = MemoryDB.boardList;
+        for (Board board : list) {
+            System.out.println(board.toString());
+        }
 
         List<Board> boardList = boardService.boardList(request);
         request.setAttribute("boardList", boardList);

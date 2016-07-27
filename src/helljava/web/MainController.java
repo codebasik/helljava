@@ -19,6 +19,8 @@ public class MainController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        request.setCharacterEncoding("UTF-8");
+
         ArrayList<User> userList = MemoryDB.userList;
 
         request.setAttribute("userList", userList);

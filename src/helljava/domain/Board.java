@@ -38,4 +38,13 @@ public class Board {
     public void setUsername(String username) {
         this.username = username;
     }
+
+    @Override
+    public String toString() {
+        return "Board{" +
+                "title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", username='" + username + '\'' +
+                '}';
+    }
 }

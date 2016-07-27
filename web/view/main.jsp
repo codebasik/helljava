@@ -42,8 +42,10 @@
         <c:if test="${empty s_user}">
             <c:redirect url="/login.do"/>
         </c:if>
-        ${s_user}님 안녕하세요
+        <h1>지옥자바</h1>
+        <p>지옥자바 게시판 만들기 과제</p>
     </div>
+
 
 </div> <!-- /container -->
 <script src="/resources/assets/js/jquery.js"></script>

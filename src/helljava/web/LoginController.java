@@ -21,6 +21,8 @@ public class LoginController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        request.setCharacterEncoding("UTF-8");
+
         CookieBox cookieBox = new CookieBox(request);
         request.setAttribute("c_user", cookieBox.getValue("c_user"));
         request.setAttribute("isSaveCheck", cookieBox.getValue("isSaveCheck"));
@@ -31,6 +33,8 @@ public class LoginController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        request.setCharacterEncoding("UTF-8");
 
         String username = request.getParameter("username");
         String password = request.getParameter("userpassword");
