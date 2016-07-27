@@ -45,24 +45,6 @@
         ${s_user}님 안녕하세요
     </div>
 
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>#</th>
-            <th>이름</th>
-            <th>비..밀번호....</th>
-        </tr>
-        </thead>
-        <tbody>
-        <c:forEach items="${userList}" var="list">
-            <tr>
-                <td></td>
-                <td>${list.username}</td>
-                <td>${list.userpassword}</td>
-            </tr>
-        </c:forEach>
-        </tbody>
-    </table>
 </div> <!-- /container -->
 <script src="/resources/assets/js/jquery.js"></script>
 <script src="/resources/js/bootstrap.min.js"></script>

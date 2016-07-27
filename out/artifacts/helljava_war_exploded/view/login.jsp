@@ -11,17 +11,23 @@
         </ul>
         <h3 class="text-muted">로그인</h3>
     </div>
+
     <form role="form" action="/login.do" method="post">
         <div class="form-group">
             <label for="userName">이름</label>
-            <input type="text" name="username" class="form-control" id="userName" placeholder="이름을 입력하세요" required>
+            <input type="text" name="username" class="form-control" id="userName" placeholder="이름을 입력하세요" value="${c_user}" required>
         </div>
         <div class="form-group">
             <label for="userPassword">비밀번호</label>
             <input type="password" name="userpassword" class="form-control" id="userPassword" placeholder="비밀번호를 입력하세요" required>
         </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" name="isSaveCheck" id="isSaveCheck" ${isSaveCheck == "Y" ? "checked" : ""}> 아이디저장
+            </label>
+        </div>
         <a href="/register.do"><p>회원가입</p></a>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn btn-default">로그인</button>
     </form>
 </div> <!-- /container -->
 <script src="/resources/assets/js/jquery.js"></script>

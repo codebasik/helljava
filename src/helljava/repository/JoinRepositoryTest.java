@@ -1,7 +1,6 @@
 package helljava.repository;
 
 import helljava.DB.MemoryDB;
-import helljava.domain.Board;
 import helljava.domain.User;
 import org.junit.Before;
 import org.junit.Test;
