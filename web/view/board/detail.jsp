@@ -43,6 +43,7 @@
         </div>
     </form>
     <div class="text-right">
+        <a href="/boardDelete.do?seq=${detail.seq}" class="btn btn-default">글삭제</a>
         <a href="/board.do" class="btn btn-default">목록으로</a>
     </div>
 </div> <!-- /container -->

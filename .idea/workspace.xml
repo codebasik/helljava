@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbda47bb-9df7-470e-a0e7-e7199fadd563" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/helljava/web/BoardDetailController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/view/board/detail.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/helljava/web/BoardDeleteController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/helljava_war_exploded/view/main.jsp" afterPath="$PROJECT_DIR$/out/artifacts/helljava_war_exploded/view/main.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/helljava/repository/BoardRepository.java" afterPath="$PROJECT_DIR$/src/helljava/repository/BoardRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/helljava/service/BoardService.java" afterPath="$PROJECT_DIR$/src/helljava/service/BoardService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/view/board/list.jsp" afterPath="$PROJECT_DIR$/web/view/board/list.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/view/board/write.jsp" afterPath="$PROJECT_DIR$/web/view/board/write.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/view/board/detail.jsp" afterPath="$PROJECT_DIR$/web/view/board/detail.jsp" />
     </list>
     <ignored path="helljava.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,11 +37,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="BoardDeleteController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/helljava/web/BoardDeleteController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="detail.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/view/board/detail.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-215">
+              <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BoardRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/helljava/repository/BoardRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="385">
+              <caret line="62" column="35" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2002#2003#0" expanded="true" />
+                <element signature="e#2069#2070#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="BoardController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/helljava/web/BoardController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="47" selection-end-column="39" />
+            <state relative-caret-position="345">
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -60,54 +93,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BoardRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/helljava/repository/BoardRepository.java">
+      <file leaf-file-name="BoardDetailController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/helljava/web/BoardDetailController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+            <state relative-caret-position="420">
+              <caret line="28" column="39" selection-start-line="20" selection-start-column="8" selection-end-line="28" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Board.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/helljava/domain/Board.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="detail.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/view/board/detail.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
-              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="write.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/view/board/write.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/view/board/list.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="82" selection-end-column="10" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -120,8 +113,8 @@
         <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="JUnit4 Test Class" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -181,7 +174,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/register.html" />
         <option value="$PROJECT_DIR$/helljava.iml" />
         <option value="$PROJECT_DIR$/src/example/LogoutServlet.java" />
         <option value="$PROJECT_DIR$/src/example/LoginServlet.java" />
@@ -225,13 +217,14 @@
         <option value="$PROJECT_DIR$/src/helljava/domain/Board.java" />
         <option value="$PROJECT_DIR$/src/helljava/web/WriteController.java" />
         <option value="$PROJECT_DIR$/src/helljava/repository/BoardRepositoryTest.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/view/board/list.jsp" />
         <option value="$PROJECT_DIR$/src/helljava/service/BoardService.java" />
-        <option value="$PROJECT_DIR$/src/helljava/repository/BoardRepository.java" />
         <option value="$PROJECT_DIR$/web/view/board/write.jsp" />
         <option value="$PROJECT_DIR$/src/helljava/web/BoardDetailController.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/view/board/detail.jsp" />
+        <option value="$PROJECT_DIR$/src/helljava/repository/BoardRepository.java" />
+        <option value="$PROJECT_DIR$/src/helljava/web/BoardDeleteController.java" />
       </list>
     </option>
   </component>
@@ -1257,7 +1250,7 @@
       <workItem from="1469149228961" duration="315000" />
       <workItem from="1469264794905" duration="4930000" />
       <workItem from="1469429665031" duration="34788000" />
-      <workItem from="1469622449775" duration="12393000" />
+      <workItem from="1469622449775" duration="13685000" />
     </task>
     <task id="LOCAL-00001" summary="로그인/회원가입/글목록/글쓰기 기능 구현중">
       <created>1469457287007</created>
@@ -1287,7 +1280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1469633487589</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="상세보기... 급한대로... controller를 나눴다.. ㅠㅠ">
+      <created>1469635113963</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1469635113963</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1323,7 +1323,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74344000" />
+    <option name="totallyTimeSpent" value="75636000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1889" y="-107" width="1889" height="1057" extended-state="0" />
@@ -1427,7 +1427,8 @@
     <MESSAGE value="아이디 저장 체크시 로그인 창에 아이디 노출" />
     <MESSAGE value="인코딩 깨짐처리" />
     <MESSAGE value="글번호 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="글번호 추가" />
+    <MESSAGE value="상세보기... 급한대로... controller를 나눴다.. ㅠㅠ" />
+    <option name="LAST_COMMIT_MESSAGE" value="상세보기... 급한대로... controller를 나눴다.. ㅠㅠ" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1440,7 +1441,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/test.html" />
     <entry file="file://$PROJECT_DIR$/web/css/login_style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="900">
@@ -1753,18 +1753,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/web/view/board/list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="132" column="30" selection-start-line="132" selection-start-column="22" selection-end-line="132" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/helljava/service/BoardService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        <state relative-caret-position="355">
+          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="82" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -1777,34 +1769,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/helljava/web/BoardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="47" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/helljava/web/BoardDetailController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/helljava/repository/BoardRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/helljava/domain/Board.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1813,19 +1777,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/view/board/list.jsp">
+    <entry file="file://$PROJECT_DIR$/src/helljava/web/BoardDetailController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="82" selection-end-column="10" />
+        <state relative-caret-position="420">
+          <caret line="28" column="39" selection-start-line="20" selection-start-column="8" selection-end-line="28" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="138" column="14" selection-start-line="138" selection-start-column="14" selection-end-line="138" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helljava/web/BoardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/view/board/detail.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+        <state relative-caret-position="-215">
+          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helljava/service/BoardService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helljava/repository/BoardRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="62" column="35" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2002#2003#0" expanded="true" />
+            <element signature="e#2069#2070#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helljava/web/BoardDeleteController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

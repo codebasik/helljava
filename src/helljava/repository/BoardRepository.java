@@ -60,4 +60,8 @@ public class BoardRepository {
                 .getSeq();
     }
 
+    public void deleteBoard(int seq) {
+        MemoryDB.boardList.removeIf(b -> b.getSeq() == seq);
+    }
+
 }
