@@ -1,7 +1,7 @@
 package helljava.web;
 
-import helljava.DB.MemoryDB;
-import helljava.domain.User;
+import helljava.repository.BoardRepository;
+import helljava.repository.JoinRepository;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
 
 /**
  * Created by yongjunjung on 2016. 7. 18..
@@ -21,9 +20,12 @@ public class MainController extends HttpServlet {
 
         request.setCharacterEncoding("UTF-8");
 
-        ArrayList<User> userList = MemoryDB.userList;
-
-        request.setAttribute("userList", userList);
+//        JoinRepository joinRepository = new JoinRepository();
+//        joinRepository.addUser("정용준", "111");
+//
+//        BoardRepository boardRepository = new BoardRepository();
+//        boardRepository.write("정용준", "첫번째", "첫번째 글이에요");
+//        boardRepository.write("정용준", "두번째", "두번째 글이에요");
 
         RequestDispatcher view = request.getRequestDispatcher("/view/main.jsp");
         view.forward(request,response);

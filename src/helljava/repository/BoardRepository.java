@@ -12,8 +12,8 @@ import java.util.stream.Collectors;
 public class BoardRepository {
 
     public void write(String username, String title, String content) {
-
-        Board board = new Board(title,content ,username);
+        int maxSeq = this.findByMaxSeq();
+        Board board = new Board(maxSeq+1,title,content ,username);
         MemoryDB.boardList.add(board);
     }
 
@@ -59,6 +59,18 @@ public class BoardRepository {
                 .collect(Collectors.toList());
 
         return collect;
+    }
+
+    public int findByMaxSeq() {
+
+        if(MemoryDB.boardList.size() == 0) {
+            return 0;
+        }
+
+        return MemoryDB.boardList.stream()
+                .max((s1, s2) -> Integer.compare(s1.getSeq(), s2.getSeq()))
+                .get()
+                .getSeq();
     }
 
 }

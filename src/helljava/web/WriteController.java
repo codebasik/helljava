@@ -1,6 +1,7 @@
 package helljava.web;
 
-import helljava.repository.BoardRepository;
+
+import helljava.service.BoardService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -27,12 +28,8 @@ public class WriteController extends HttpServlet {
 
         request.setCharacterEncoding("UTF-8");
 
-        String userName = request.getParameter("username");
-        String title = request.getParameter("title");
-        String content = request.getParameter("content");
-
-        BoardRepository boardRepository = new BoardRepository();
-        boardRepository.write(userName, title, content);
+        BoardService boardService = new BoardService();
+        boardService.addBoard(request);
 
         response.sendRedirect("/board.do");
 

@@ -3,15 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="cbda47bb-9df7-470e-a0e7-e7199fadd563" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/helljava_war_exploded/view/login.jsp" afterPath="$PROJECT_DIR$/out/artifacts/helljava_war_exploded/view/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/helljava_war_exploded/view/main.jsp" afterPath="$PROJECT_DIR$/out/artifacts/helljava_war_exploded/view/main.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/helljava/domain/Board.java" afterPath="$PROJECT_DIR$/src/helljava/domain/Board.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/helljava/web/BoardController.java" afterPath="$PROJECT_DIR$/src/helljava/web/BoardController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/helljava/web/JoinController.java" afterPath="$PROJECT_DIR$/src/helljava/web/JoinController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/helljava/web/LoginController.java" afterPath="$PROJECT_DIR$/src/helljava/web/LoginController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/helljava/repository/BoardRepository.java" afterPath="$PROJECT_DIR$/src/helljava/repository/BoardRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/helljava/repository/BoardRepositoryTest.java" afterPath="$PROJECT_DIR$/src/helljava/repository/BoardRepositoryTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/helljava/service/BoardService.java" afterPath="$PROJECT_DIR$/src/helljava/service/BoardService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/helljava/web/MainController.java" afterPath="$PROJECT_DIR$/src/helljava/web/MainController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/helljava/web/WriteController.java" afterPath="$PROJECT_DIR$/src/helljava/web/WriteController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/view/board/list.jsp" afterPath="$PROJECT_DIR$/web/view/board/list.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/view/main.jsp" afterPath="$PROJECT_DIR$/web/view/main.jsp" />
     </list>
     <ignored path="helljava.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,7 +39,28 @@
     <favorites_list name="helljava" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="BoardController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/helljava/web/BoardController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="295">
+              <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BoardService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/helljava/service/BoardService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="38" column="15" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -135,9 +155,6 @@
         <option value="$PROJECT_DIR$/src/helljava/models/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/helljava/models/BoardRepository.java" />
         <option value="$PROJECT_DIR$/src/helljava/repository/BoardRepositoryTest.groovy" />
-        <option value="$PROJECT_DIR$/src/helljava/repository/BoardRepositoryTest.java" />
-        <option value="$PROJECT_DIR$/src/helljava/repository/BoardRepository.java" />
-        <option value="$PROJECT_DIR$/src/helljava/service/BoardService.java" />
         <option value="$PROJECT_DIR$/src/helljava/MemoryDB.java" />
         <option value="$PROJECT_DIR$/src/helljava/domain/User.java" />
         <option value="$PROJECT_DIR$/src/helljava/DB/MemoryDB.java" />
@@ -155,11 +172,14 @@
         <option value="$PROJECT_DIR$/web/view/join.jsp" />
         <option value="$PROJECT_DIR$/src/helljava/web/JoinController.java" />
         <option value="$PROJECT_DIR$/src/helljava/web/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/helljava/web/MainController.java" />
-        <option value="$PROJECT_DIR$/web/view/board/list.jsp" />
-        <option value="$PROJECT_DIR$/src/helljava/domain/Board.java" />
         <option value="$PROJECT_DIR$/src/helljava/web/BoardController.java" />
+        <option value="$PROJECT_DIR$/src/helljava/web/MainController.java" />
+        <option value="$PROJECT_DIR$/src/helljava/domain/Board.java" />
+        <option value="$PROJECT_DIR$/web/view/board/list.jsp" />
         <option value="$PROJECT_DIR$/src/helljava/web/WriteController.java" />
+        <option value="$PROJECT_DIR$/src/helljava/repository/BoardRepositoryTest.java" />
+        <option value="$PROJECT_DIR$/src/helljava/repository/BoardRepository.java" />
+        <option value="$PROJECT_DIR$/src/helljava/service/BoardService.java" />
       </list>
     </option>
   </component>
@@ -398,6 +418,50 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="helljava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="helljava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="helljava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="repository" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="helljava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="helljava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="helljava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -405,7 +469,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib/hamcrest-core-1.2.jar!/" />
+    <property name="last_opened_file_path" value="$USER_HOME$/study/hell-java" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="SearchEverywhereHistoryKey" value="plugin&#9;ACTION&#9;WelcomeScreen.Plugins&#10;plugins&#9;ACTION&#9;WelcomeScreen.Plugins" />
@@ -425,19 +489,8 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="helljava.repository" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/web/view/board" />
-      <recent name="$PROJECT_DIR$/web/view" />
-      <recent name="$PROJECT_DIR$/web/WEB-INF/lib" />
-      <recent name="$PROJECT_DIR$/web" />
-      <recent name="$PROJECT_DIR$/web/WEB-INF/jsp" />
-    </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="helljava.MemoryDB" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-      <recent name="groovy.util.GroovyTestCase" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web/WEB-INF/lib" />
@@ -445,8 +498,19 @@
       <recent name="$PROJECT_DIR$/web/WEB-INF/tld" />
       <recent name="$PROJECT_DIR$/web" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+      <recent name="groovy.util.GroovyTestCase" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/view/board" />
+      <recent name="$PROJECT_DIR$/web/view" />
+      <recent name="$PROJECT_DIR$/web/WEB-INF/lib" />
+      <recent name="$PROJECT_DIR$/web" />
+      <recent name="$PROJECT_DIR$/web/WEB-INF/jsp" />
+    </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.tomcat">
+  <component name="RunManager" selected="JUnit.BoardRepositoryTest.아무것도없을때">
     <configuration default="false" name="UserRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -461,58 +525,6 @@
       <option name="MAIN_CLASS_NAME" value="helljava.repository.UserRepositoryTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="JoinRepositoryTest.회원아이디중복인경우" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="helljava.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="helljava" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="helljava.repository" />
-      <option name="MAIN_CLASS_NAME" value="helljava.repository.JoinRepositoryTest" />
-      <option name="METHOD_NAME" value="회원아이디중복인경우" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="UserRepositoryTest.회원이없을때" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="helljava.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="helljava" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="helljava.repository" />
-      <option name="MAIN_CLASS_NAME" value="helljava.repository.UserRepositoryTest" />
-      <option name="METHOD_NAME" value="회원이없을때" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -565,6 +577,58 @@
       <option name="MAIN_CLASS_NAME" value="helljava.repository.JoinRepositoryTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="BoardRepositoryTest.findByMaxSeq" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="helljava.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="helljava" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="helljava.repository" />
+      <option name="MAIN_CLASS_NAME" value="helljava.repository.BoardRepositoryTest" />
+      <option name="METHOD_NAME" value="findByMaxSeq" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="BoardRepositoryTest.아무것도없을때" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="helljava.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="helljava" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="helljava.repository" />
+      <option name="MAIN_CLASS_NAME" value="helljava.repository.BoardRepositoryTest" />
+      <option name="METHOD_NAME" value="아무것도없을때" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -1078,18 +1142,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.tomcat" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.UserRepositoryTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.JoinRepositoryTest.회원아이디중복인경우" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.UserRepositoryTest.회원이없을때" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.BoardRepositoryTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.JoinRepositoryTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.BoardRepositoryTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.JoinRepositoryTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.BoardRepositoryTest.findByMaxSeq" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.BoardRepositoryTest.아무것도없을때" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.JoinRepositoryTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.BoardRepositoryTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.UserRepositoryTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.JoinRepositoryTest.회원아이디중복인경우" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.UserRepositoryTest.회원이없을때" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.BoardRepositoryTest.아무것도없을때" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.BoardRepositoryTest.findByMaxSeq" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.JoinRepositoryTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.BoardRepositoryTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.UserRepositoryTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1119,7 +1183,7 @@
       <workItem from="1469149228961" duration="315000" />
       <workItem from="1469264794905" duration="4930000" />
       <workItem from="1469429665031" duration="34788000" />
-      <workItem from="1469622449775" duration="7980000" />
+      <workItem from="1469622449775" duration="10778000" />
     </task>
     <task id="LOCAL-00001" summary="로그인/회원가입/글목록/글쓰기 기능 구현중">
       <created>1469457287007</created>
@@ -1135,43 +1199,50 @@
       <option name="project" value="LOCAL" />
       <updated>1469628058631</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="인코딩 깨짐처리">
+      <created>1469630682408</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1469630682408</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BoardRepositoryTest - 2016.07.27 at 21h 55m 14s.xml">
-      <configuration name="BoardRepositoryTest" configurationId="JUnit" />
+    <history-entry file="BoardRepositoryTest_아무것도없을때 - 2016.07.28 at 00h 24m 38s.xml">
+      <configuration name="BoardRepositoryTest.아무것도없을때" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JoinRepositoryTest - 2016.07.27 at 21h 55m 19s.xml">
-      <configuration name="JoinRepositoryTest" configurationId="JUnit" />
+    <history-entry file="BoardRepositoryTest_아무것도없을때 - 2016.07.28 at 00h 24m 55s.xml">
+      <configuration name="BoardRepositoryTest.아무것도없을때" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JoinRepositoryTest - 2016.07.27 at 21h 55m 48s.xml">
-      <configuration name="JoinRepositoryTest" configurationId="JUnit" />
+    <history-entry file="BoardRepositoryTest_아무것도없을때 - 2016.07.28 at 00h 25m 08s.xml">
+      <configuration name="BoardRepositoryTest.아무것도없을때" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JoinRepositoryTest - 2016.07.27 at 21h 57m 02s.xml">
-      <configuration name="JoinRepositoryTest" configurationId="JUnit" />
+    <history-entry file="BoardRepositoryTest_아무것도없을때 - 2016.07.28 at 00h 25m 42s.xml">
+      <configuration name="BoardRepositoryTest.아무것도없을때" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserRepositoryTest - 2016.07.27 at 00h 04m 54s.xml">
-      <configuration name="UserRepositoryTest" configurationId="JUnit" />
+    <history-entry file="BoardRepositoryTest_아무것도없을때 - 2016.07.28 at 00h 26m 21s.xml">
+      <configuration name="BoardRepositoryTest.아무것도없을때" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserRepositoryTest - 2016.07.27 at 21h 55m 06s.xml">
-      <configuration name="UserRepositoryTest" configurationId="JUnit" />
+    <history-entry file="BoardRepositoryTest_아무것도없을때 - 2016.07.28 at 00h 27m 03s.xml">
+      <configuration name="BoardRepositoryTest.아무것도없을때" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserRepositoryTest_존재하지않는회원원_Exeption - 2016.07.26 at 23h 28m 59s.xml">
-      <configuration name="UserRepositoryTest.존재하지않는회원원_Exeption" configurationId="JUnit" />
+    <history-entry file="BoardRepositoryTest_아무것도없을때 - 2016.07.28 at 00h 27m 19s.xml">
+      <configuration name="BoardRepositoryTest.아무것도없을때" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserRepositoryTest_존재하지않는회원원_Exeption - 2016.07.26 at 23h 29m 11s.xml">
-      <configuration name="UserRepositoryTest.존재하지않는회원원_Exeption" configurationId="JUnit" />
+    <history-entry file="BoardRepositoryTest_아무것도없을때 - 2016.07.28 at 00h 27m 34s.xml">
+      <configuration name="BoardRepositoryTest.아무것도없을때" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserRepositoryTest_회원이없을때 - 2016.07.26 at 23h 55m 22s.xml">
-      <configuration name="UserRepositoryTest.회원이없을때" configurationId="JUnit" />
+    <history-entry file="BoardRepositoryTest_아무것도없을때 - 2016.07.28 at 00h 28m 20s.xml">
+      <configuration name="BoardRepositoryTest.아무것도없을때" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserRepositoryTest_회원이없을때 - 2016.07.26 at 23h 55m 46s.xml">
-      <configuration name="UserRepositoryTest.회원이없을때" configurationId="JUnit" />
+    <history-entry file="BoardRepositoryTest_아무것도없을때 - 2016.07.28 at 00h 28m 30s.xml">
+      <configuration name="BoardRepositoryTest.아무것도없을때" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69931000" />
+    <option name="totallyTimeSpent" value="72729000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1889" y="-107" width="1889" height="1057" extended-state="6" />
@@ -1273,7 +1344,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="로그인/회원가입/글목록/글쓰기 기능 구현중" />
     <MESSAGE value="아이디 저장 체크시 로그인 창에 아이디 노출" />
-    <option name="LAST_COMMIT_MESSAGE" value="아이디 저장 체크시 로그인 창에 아이디 노출" />
+    <MESSAGE value="인코딩 깨짐처리" />
+    <option name="LAST_COMMIT_MESSAGE" value="인코딩 깨짐처리" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1338,14 +1410,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/helljava/HelloWorld.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/tld/c.tld">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1394,14 +1458,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/view/board/write.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/helljava/repository/BoardRepositoryTest.groovy" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/src.zip!/java/net/URLClassLoader.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1447,14 +1503,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/helljava/repository/LoginRepository.java" />
-    <entry file="file://$PROJECT_DIR$/src/helljava/service/JoinService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/helljava/util/C.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1478,24 +1526,6 @@
         <state relative-caret-position="272">
           <caret line="24" column="59" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/helljava/repository/JoinRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/helljava/repository/BoardRepositoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1532,7 +1562,7 @@
         <state relative-caret-position="192">
           <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1569,60 +1599,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/helljava/domain/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/helljava/repository/BoardRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/helljava/web/LogoutController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/helljava/web/WriteController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/helljava/web/BoardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/helljava/service/BoardService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/view/board/list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -1645,14 +1625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/helljava/web/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/helljava/web/RegisterController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1665,6 +1637,113 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="30" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helljava/HelloWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helljava/service/JoinService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helljava/repository/JoinRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helljava/web/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helljava/domain/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+          <folding>
+            <element signature="e#428#429#0" expanded="true" />
+            <element signature="e#454#455#0" expanded="true" />
+            <element signature="e#489#490#0" expanded="true" />
+            <element signature="e#519#520#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/view/board/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="59" column="39" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helljava/web/WriteController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/view/board/write.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helljava/web/BoardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helljava/repository/BoardRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="67" column="29" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helljava/repository/BoardRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="54" column="42" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helljava/service/BoardService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="38" column="15" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
           <folding />
         </state>
       </provider>

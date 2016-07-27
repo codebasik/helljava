@@ -42,27 +42,11 @@
         <c:if test="${empty s_user}">
             <c:redirect url="/login.do"/>
         </c:if>
-        ${s_user}님 안녕하세요
+        <h1>지옥자바</h1>
+        <p>지옥자바 게시판 만들기 과제</p>
     </div>
 
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>#</th>
-            <th>이름</th>
-            <th>비..밀번호....</th>
-        </tr>
-        </thead>
-        <tbody>
-        <c:forEach items="${userList}" var="list">
-            <tr>
-                <td></td>
-                <td>${list.username}</td>
-                <td>${list.userpassword}</td>
-            </tr>
-        </c:forEach>
-        </tbody>
-    </table>
+
 </div> <!-- /container -->
 <script src="/resources/assets/js/jquery.js"></script>
 <script src="/resources/js/bootstrap.min.js"></script>

@@ -69,7 +69,7 @@
             <tbody>
             <c:forEach items="${boardList}" var="list">
                 <tr>
-                    <td></td>
+                    <td>${list.seq}</td>
                     <td>${list.username}</td>
                     <td>${list.title}</td>
                     <td>${list.content}</td>

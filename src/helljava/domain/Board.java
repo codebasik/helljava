@@ -5,14 +5,24 @@ package helljava.domain;
  */
 public class Board {
 
+    private int seq;
     private String title;
     private String content;
     private String username;
 
-    public Board(String title, String content, String username) {
+    public Board(int seq, String title, String content, String username) {
+        this.seq = seq;
         this.title = title;
         this.content = content;
         this.username = username;
+    }
+
+    public int getSeq() {
+        return seq;
+    }
+
+    public void setSeq(int seq) {
+        this.seq = seq;
     }
 
     public String getTitle() {

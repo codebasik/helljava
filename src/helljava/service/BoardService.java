@@ -12,7 +12,6 @@ import java.util.List;
  */
 public class BoardService {
 
-    public static final String ALL_QUERY = "ALL";
     public static final String NAME_QUERY = "NAME";
     public static final String CONTENT_QUERY = "CONTENT";
     public static final String TITLE_QUERY = "TITLE";
@@ -33,6 +32,14 @@ public class BoardService {
         } else {
             return boardRepository.findAll(searchWord);
         }
+    }
+
+    public void addBoard(HttpServletRequest request) {
+
+        String userName = request.getParameter("username");
+        String title = request.getParameter("title");
+        String content = request.getParameter("content");
+        boardRepository.write(userName, title, content);
     }
 
 }

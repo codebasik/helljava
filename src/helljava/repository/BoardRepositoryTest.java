@@ -5,6 +5,7 @@ import helljava.domain.Board;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static junit.framework.Assert.assertEquals;
@@ -18,15 +19,16 @@ public class BoardRepositoryTest {
 
     @Before
     public void initialize() {
-        Board board = new Board("111","111","111");
-        Board board1 = new Board("111","222","222");
-        Board board2 = new Board("222","111","111");
-        Board board3 = new Board("444","333","111");
+        Board board = new Board(1, "111", "111", "111");
+        Board board1 = new Board(2, "111", "222", "222");
+        Board board2 = new Board(3, "222", "111", "111");
+        Board board3 = new Board(4, "444", "333", "111");
 
         MemoryDB.boardList.add(board);
         MemoryDB.boardList.add(board1);
         MemoryDB.boardList.add(board2);
         MemoryDB.boardList.add(board3);
+
     }
 
     @Test
@@ -47,5 +49,28 @@ public class BoardRepositoryTest {
         assertEquals(0, all.size());
 
     }
+
+    @Test
+    public void findByMaxSeq() {
+        int seq = boardRepository.findByMaxSeq();
+        assertEquals(4, seq);
+    }
+
+    @Test
+    public void 아무것도없을때() {
+
+        MemoryDB.boardList.remove(3);
+        MemoryDB.boardList.remove(2);
+        MemoryDB.boardList.remove(1);
+//        MemoryDB.boardList.remove(0);
+
+        int seq = boardRepository.findByMaxSeq();
+        assertEquals(1, seq);
+    }
+
+
+
+
+
 
 }
