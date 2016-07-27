@@ -1,7 +1,8 @@
-package helljava.contollers;
+package helljava.web;
 
+import helljava.DB.MemoryDB;
 import helljava.domain.User;
-import helljava.models.JoinRepository;
+import helljava.repository.JoinRepository;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -26,13 +27,13 @@ public class JoinController extends HttpServlet {
         String password = request.getParameter("userpassword");
 
         JoinRepository joinRepository = new JoinRepository();
-        String saveUser = joinRepository.saveUser(username, password);
+        String saveUser = joinRepository.addUser(username, password);
 
         HttpSession session = request.getSession();
         session.setAttribute("sessionUserName", saveUser);
         session.setMaxInactiveInterval(60 * 3);             //로그인시간 60초
 
-        ArrayList<User> userList = User.userList;
+        ArrayList<User> userList = MemoryDB.userList;
         for (User user : userList) {
             System.out.print("user = " + user.getUsername());
             System.out.println("  password = " + user.getUserpassword());

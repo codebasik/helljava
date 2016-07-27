@@ -21,7 +21,6 @@
     String s_user = (String) session.getAttribute("sessionUserName");
 %>
 
-
 <div class="container">
     <div class="header">
         <ul class="nav nav-pills pull-right">

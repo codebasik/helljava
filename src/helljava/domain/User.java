@@ -1,13 +1,8 @@
 package helljava.domain;
-
-import java.util.ArrayList;
-
 /**
  * Created by yongjunjung on 2016. 7. 21..
  */
 public class User {
-
-    public static ArrayList<User> userList = new ArrayList<>();
 
     private String username;
     private String userpassword;

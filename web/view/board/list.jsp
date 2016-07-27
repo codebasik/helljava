@@ -15,13 +15,10 @@
     <script src="/resources/assets/js/respond.min.js"></script>
 </head>
 <body>
-
 <%
     String s_user = (String) session.getAttribute("sessionUserName");
 %>
-
 <c:set var="s_user" value="<%=s_user%>"/>
-
 <c:if test="${empty s_user}">
     <c:redirect url="/login.do"/>
 </c:if>
@@ -40,17 +37,17 @@
         <div>
             <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">
-                    <input type="text" name="memberName" class="form-control" placeholder="회원명"
-                           value="${orderSearch.memberName}">
+                    <input type="text" name="searchWord" class="form-control" placeholder="검색어"
+                           value="${boardSearch.searchWord}" required>
                 </div>
                 <div class="form-group">
-                    <select class="form-control" name="orderStatus">
-                        <option value="">주문상태</option>
-                        <option value="ORDER"
-                                <c:if test="${orderSearch.orderStatus eq 'ORDER'}">selected</c:if> >주문
+                    <select class="form-control" name="queryInput">
+                        <option value="ALL">전체</option>
+                        <option value="NAME"
+                                <c:if test="${boardSearch.queryInput eq 'NAME'}">selected</c:if> >이름
                         </option>
-                        <option value="CANCEL"
-                                <c:if test="${orderSearch.orderStatus eq 'CANCEL'}">selected</c:if> >취소
+                        <option value="CONTENT"
+                                <c:if test="${boardSearch.queryInput eq 'CONTENTS'}">selected</c:if> >내용
                         </option>
                     </select>
                 </div>
@@ -79,9 +76,9 @@
             </tbody>
         </table>
     </div>
-
-
+    <div class="text-right">
+        <a href="/write.do" class="btn btn-default">글쓰기</a>
+    </div>
 </div> <!-- /container -->
-
 </body>
 </html>

@@ -1,13 +1,9 @@
 package helljava.domain;
 
-import java.util.ArrayList;
-
 /**
  * Created by yongjunjung on 2016. 7. 25..
  */
 public class Board {
-
-    public static ArrayList<Board> boardList = new ArrayList<>();
 
     private String title;
     private String content;

@@ -63,8 +63,6 @@
         </c:forEach>
         </tbody>
     </table>
-    <button type="submit" class="btn btn-default">Submit</button>
-    <input type="button" class="btn btn-default" onclick="location.href='/write.do'"; >글쓰기</input>
 </div> <!-- /container -->
 <script src="/resources/assets/js/jquery.js"></script>
 <script src="/resources/js/bootstrap.min.js"></script>

@@ -1,4 +1,4 @@
-package helljava.contollers;
+package helljava.web;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
