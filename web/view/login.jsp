@@ -20,8 +20,14 @@
             <label for="userPassword">비밀번호</label>
             <input type="password" name="userpassword" class="form-control" id="userPassword" placeholder="비밀번호를 입력하세요" required>
         </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" name="save_id" id="save_id" ${save_id == "Y" ? "checked" : ""}> 아이디저장
+            </label>
+        </div>
         <a href="/register.do"><p>회원가입</p></a>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn btn-default">로그인</button>
+
     </form>
 </div> <!-- /container -->
 <script src="/resources/assets/js/jquery.js"></script>

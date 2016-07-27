@@ -44,13 +44,13 @@ public class UserRepositoryTest {
 
     @Test
     public void findByUser() throws Exception {
-        long count = userRepository.countUser("111");
-        assertEquals(1, count);
+        User user = userRepository.findOneUser("111");
+        assertEquals("111", user.getUsername());
     }
 
     @Test
     public void 회원이있을떄() throws Exception {
-        userRepository.countUser("333");
+        userRepository.findOneUser("333");
     }
 
 

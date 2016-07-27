@@ -41,13 +41,16 @@
                            value="${boardSearch.searchWord}" required>
                 </div>
                 <div class="form-group">
-                    <select class="form-control" name="queryInput">
+                    <select class="form-control" name="queryInput" id="queryInput" onchange="queryInputChange();" >
                         <option value="ALL">전체</option>
                         <option value="NAME"
-                                <c:if test="${boardSearch.queryInput eq 'NAME'}">selected</c:if> >이름
+                                <c:if test="${boardSearch.queryInput eq 'NAME'}">selected</c:if> >글쓴이
                         </option>
                         <option value="CONTENT"
-                                <c:if test="${boardSearch.queryInput eq 'CONTENTS'}">selected</c:if> >내용
+                                <c:if test="${boardSearch.queryInput eq 'CONTENT'}">selected</c:if> >내용
+                        </option>
+                        <option value="TITLE"
+                                <c:if test="${boardSearch.queryInput eq 'TITLE'}">selected</c:if> >제목
                         </option>
                     </select>
                 </div>
@@ -82,3 +85,4 @@
 </div> <!-- /container -->
 </body>
 </html>
+

@@ -23,13 +23,13 @@ public class UserRepository {
         return user.getUsername();
     }
 
-    public long countUser(String username) {
+    public User findOneUser(String username) {
+
         ArrayList<User> userList = MemoryDB.userList;
 
-        long count = userList.stream()
+        return userList.stream()
                 .filter(u -> u.getUsername().equals(username))
-                .count();
-
-        return count;
+                .findFirst()
+                .orElse(null);
     }
 }

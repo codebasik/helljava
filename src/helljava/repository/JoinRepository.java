@@ -11,9 +11,9 @@ public class JoinRepository {
     public String addUser(String username, String password) {
 
         UserRepository userRepository = new UserRepository();
-        long count = userRepository.countUser(username);
+        User findUser = userRepository.findOneUser(username);
 
-        if (count > 0) {
+        if (findUser != null) {
             throw new IllegalArgumentException("duplication username");
         }
 

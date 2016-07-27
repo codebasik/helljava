@@ -24,18 +24,15 @@ public class BoardService {
         String searchWord = request.getParameter("searchWord");
         String queryInput = request.getParameter("queryInput");
 
-        if (ALL_QUERY.equals(queryInput) || queryInput == null) {
-            return boardRepository.findAll(searchWord);
-        } else if (NAME_QUERY.equals(queryInput)) {
+        if (NAME_QUERY.equals(queryInput)) {
             return boardRepository.findbyName(searchWord);
         } else if (CONTENT_QUERY.equals(queryInput)) {
             return boardRepository.findbyContent(searchWord);
         } else if (TITLE_QUERY.equals(queryInput)) {
             return boardRepository.findbyTitle(searchWord);
+        } else {
+            return boardRepository.findAll(searchWord);
         }
-
-        throw new IllegalArgumentException("Board Search Exception!!");
-
     }
 
 }
