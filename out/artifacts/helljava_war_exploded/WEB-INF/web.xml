@@ -125,6 +125,24 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>boardDetail</servlet-name>
+        <servlet-class>helljava.web.BoardDetailController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>boardDetail</servlet-name>
+        <url-pattern>/boardDet.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>boardDelete</servlet-name>
+        <servlet-class>helljava.web.BoardDeleteController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>boardDelete</servlet-name>
+        <url-pattern>/boardDelete.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>write</servlet-name>
         <servlet-class>helljava.web.WriteController</servlet-class>
     </servlet>
