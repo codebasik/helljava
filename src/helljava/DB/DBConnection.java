@@ -27,11 +27,11 @@ public class DBConnection {
         }
     }
 
-    public static void close(Connection conn, PreparedStatement ps) // ps,conn 닫기 반복이라 뺌
+    public static void close(Connection conn, PreparedStatement pstmt)              // ps,conn 닫기 반복이라 뺌
     {
-        if (ps != null) {
+        if (pstmt != null) {
             try {
-                ps.close();
+                pstmt.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -45,7 +45,7 @@ public class DBConnection {
         }
     }
 
-    public static void close(Connection conn, PreparedStatement ps, ResultSet rs)
+    public static void close(Connection conn, PreparedStatement pstmt, ResultSet rs)
     {
         if(rs != null)
         {
@@ -56,7 +56,7 @@ public class DBConnection {
                 e.printStackTrace();
             }
         }
-        close(conn, ps);
+        close(conn, pstmt);
     }
 
 

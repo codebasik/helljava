@@ -16,7 +16,7 @@
 </head>
 
 <%
-    String s_user = (String) session.getAttribute("sessionUserName");
+    String s_user = (String) session.getAttribute("s_id");
 %>
 
 <c:set var="s_user" value="<%=s_user%>"/>

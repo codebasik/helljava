@@ -12,35 +12,26 @@ import java.sql.SQLException;
  */
 public class JoinRepository {
 
-    public void addUser(String username, String password) {
-
-        UserRepository userRepository = new UserRepository();
-        User findUser = userRepository.findOneUser(username);
-
-        if (findUser != null) {
-            throw new IllegalArgumentException("duplication username");
-        }
+    public void addUser(String id, String name, String password, String email) {
 
         Connection conn = DBConnection.getConnection();
 
         try {
 
-            String query = "INSERT INTO USER (NAME, PASSWORD) VALUES (?,?)";
+            String query = "INSERT INTO USER (ID, NAME, PASSWORD, EMAIL) VALUES (?,?,?,?)";
 
-            PreparedStatement preparedStmt = null;
+            PreparedStatement pstmt = null;
+            pstmt = conn.prepareStatement(query);
+            pstmt.setString(1, id);
+            pstmt.setString(2, name);
+            pstmt.setString(3, password);
+            pstmt.setString(4, email);
+            pstmt.execute();
 
-            preparedStmt = conn.prepareStatement(query);
-            preparedStmt.setString(1, username);
-            preparedStmt.setString(2, password);
-            preparedStmt.execute();
-
-            DBConnection.close(conn, preparedStmt);
+            DBConnection.close(conn, pstmt);
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
-
-
 }

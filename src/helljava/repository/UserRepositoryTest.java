@@ -44,8 +44,7 @@ public class UserRepositoryTest {
 
     @Test
     public void findByUser() throws Exception {
-        User user = userRepository.findOneUser("111");
-        assertEquals("111", user.getUsername());
+        userRepository.findOneUser("111");
     }
 
     @Test
