@@ -14,12 +14,12 @@
 
     <form role="form" action="/login.do" method="post">
         <div class="form-group">
-            <label for="userName">이름</label>
-            <input type="text" name="username" class="form-control" id="userName" placeholder="이름을 입력하세요" value="${c_user}" required>
+            <label for="userid">ID</label>
+            <input type="text" name="userid" class="form-control" id="userid" placeholder="ID를 입력하세요" value="${c_id}" required>
         </div>
         <div class="form-group">
-            <label for="userPassword">비밀번호</label>
-            <input type="password" name="userpassword" class="form-control" id="userPassword" placeholder="비밀번호를 입력하세요" required>
+            <label for="userpassword">비밀번호</label>
+            <input type="password" name="userpassword" class="form-control" id="userpassword" placeholder="비밀번호를 입력하세요" required>
         </div>
         <div class="checkbox">
             <label>

@@ -54,6 +54,34 @@ public class UserRepository {
         }
     }
 
+    public String findByIdAndPassword(String userId, String userPassword) {
+
+        Connection conn = DBConnection.getConnection();
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+
+        try {
+
+            String query = "SELECT * FROM USER WHERE ID=? AND PASSWORD=?";
+
+            pstmt = conn.prepareStatement(query);
+            pstmt.setString(1, userId);
+            pstmt.setString(2, userPassword);
+            rs = pstmt.executeQuery();
+
+            String id = "";
+            while (rs.next()) {
+                id = rs.getString("ID");
+            }
+
+            return id;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new IllegalArgumentException("Error!");
+        }
+    }
+
     public String findById(String userId) {
 
         Connection conn = DBConnection.getConnection();
@@ -68,12 +96,12 @@ public class UserRepository {
             pstmt.setString(1, userId);
             rs = pstmt.executeQuery();
 
-            String user_id = "";
+            String id = "";
             while (rs.next()) {
-                user_id = rs.getString("ID");
+                id = rs.getString("ID");
             }
 
-            return user_id;
+            return id;
 
         } catch (SQLException e) {
             e.printStackTrace();
