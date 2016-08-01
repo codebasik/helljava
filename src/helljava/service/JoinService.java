@@ -14,9 +14,9 @@ public class JoinService {
         String password = request.getParameter("userpassword");
 
         JoinRepository joinRepository = new JoinRepository();
-        String joinUserName = joinRepository.addUser(username, password);
+        joinRepository.addUser(username, password);
 
-        return joinUserName;
+        return username;
     }
 
 }

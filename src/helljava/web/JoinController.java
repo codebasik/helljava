@@ -23,10 +23,10 @@ public class JoinController extends HttpServlet {
         String password = request.getParameter("userpassword");
 
         JoinRepository joinRepository = new JoinRepository();
-        String saveUser = joinRepository.addUser(username, password);
+        joinRepository.addUser(username, password);
 
         HttpSession session = request.getSession();
-        session.setAttribute("sessionUserName", saveUser);
+        session.setAttribute("sessionUserName", username);
         session.setMaxInactiveInterval(60 * 3);             //로그인시간 60초
 
         RequestDispatcher view = request.getRequestDispatcher("/view/join.jsp");

@@ -22,13 +22,13 @@ public class JoinRepositoryTest {
 
     @Test
     public void addUser() throws Exception {
-        String user = joinRepository.addUser("111", "111");
-        assertEquals(MemoryDB.userList.get(0).getUsername(), user);
+        joinRepository.addUser("111", "111");
+
     }
 
     @Test(expected = Exception.class)
     public void 회원아이디중복인경우() throws Exception {
-        String user = joinRepository.addUser("222", "111");
+        joinRepository.addUser("222", "111");
 
     }
 
