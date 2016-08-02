@@ -4,7 +4,6 @@ import helljava.domain.Board;
 import helljava.repository.BoardRepository;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -35,12 +34,6 @@ public class BoardService {
     }
 
     public void addBoard(HttpServletRequest request) {
-
-        String userName = request.getParameter("username");
-        String title = request.getParameter("title");
-        String content = request.getParameter("content");
-        boardRepository.write(userName, title, content);
+        boardRepository.write(request);
     }
-
-
 }

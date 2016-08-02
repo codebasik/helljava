@@ -1,8 +1,13 @@
 package helljava.repository;
 
+import helljava.DB.DBConnection;
 import helljava.DB.MemoryDB;
 import helljava.domain.Board;
-import java.util.ArrayList;
+
+import javax.servlet.http.HttpServletRequest;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -11,10 +16,31 @@ import java.util.stream.Collectors;
  */
 public class BoardRepository {
 
-    public void write(String username, String title, String content) {
-        int maxSeq = this.findByMaxSeq();
-        Board board = new Board(maxSeq+1,title,content ,username);
-        MemoryDB.boardList.add(board);
+    public void write(HttpServletRequest request) {
+
+        String userName = request.getParameter("username");
+        String title = request.getParameter("title");
+        String content = request.getParameter("content");
+
+        Connection conn = DBConnection.getConnection();
+
+        try {
+
+            String query = "INSERT INTO BOARD (NAME, TITLE, CONTENT) VALUES (?,?,?)";
+
+            PreparedStatement pstmt = null;
+            pstmt = conn.prepareStatement(query);
+            pstmt.setString(1, userName);
+            pstmt.setString(2, title);
+            pstmt.setString(3, content);
+            pstmt.execute();
+
+            DBConnection.close(conn, pstmt);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new IllegalArgumentException("write error!");
+        }
     }
 
     public List<Board> findAll(String searchWord) {
@@ -50,7 +76,7 @@ public class BoardRepository {
 
     public int findByMaxSeq() {
 
-        if(MemoryDB.boardList.size() == 0) {
+        if (MemoryDB.boardList.size() == 0) {
             return 0;
         }
 

@@ -18,7 +18,7 @@
 <body>
 
 <%
-    String s_user = (String) session.getAttribute("sessionUserName");
+    String s_id = (String) session.getAttribute("s_id");
 %>
 
 <div class="container">
@@ -31,7 +31,7 @@
     <form role="form" action="/write.do" method="post">
         <div class="form-group">
             <label for="username">이름</label>
-            <input type="text" name="username" class="form-control" id="username" placeholder="이름을 입력하세요" required>
+            <input type="text" name="username" class="form-control" id="username" placeholder="이름을 입력하세요" value="<%=s_id%>" required>
         </div>
         <div class="form-group">
             <label for="title">제목</label>
