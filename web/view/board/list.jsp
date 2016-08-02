@@ -15,10 +15,10 @@
 </head>
 <body>
 <%
-    String s_user = (String) session.getAttribute("sessionUserName");
+    String s_id = (String) session.getAttribute("s_id");
 %>
-<c:set var="s_user" value="<%=s_user%>"/>
-<c:if test="${empty s_user}">
+<c:set var="s_id" value="<%=s_id%>"/>
+<c:if test="${empty s_id}">
     <c:redirect url="/login.do"/>
 </c:if>
 
@@ -26,7 +26,7 @@
     <div class="header">
         <ul class="nav nav-pills pull-right">
             <li class="active"><a href="/">Home</a></li>
-            <c:if test="${not empty s_user}">
+            <c:if test="${not empty s_id}">
                 <li><a href="/logout.do">로그아웃</a></li>
             </c:if>
         </ul>

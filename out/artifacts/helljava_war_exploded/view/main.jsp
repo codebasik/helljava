@@ -16,7 +16,7 @@
 </head>
 
 <%
-    String s_user = (String) session.getAttribute("sessionUserName");
+    String s_user = (String) session.getAttribute("s_id");
 %>
 
 <c:set var="s_user" value="<%=s_user%>"/>
@@ -39,9 +39,6 @@
     </div>
 
     <div class="form-group">
-        <c:if test="${empty s_user}">
-            <c:redirect url="/login.do"/>
-        </c:if>
         <h1>지옥자바</h1>
         <p>지옥자바 게시판 만들기 과제</p>
     </div>

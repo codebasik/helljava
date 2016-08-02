@@ -18,7 +18,7 @@
 <body>
 
 <%
-    String s_user = (String) session.getAttribute("sessionUserName");
+    String s_user = (String) session.getAttribute("s_id");
 %>
 
 <div class="container">
