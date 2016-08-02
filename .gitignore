@@ -8,6 +8,7 @@
 # Package Files #
 *.jar
 *.xml
+out/artifacts/*
 helljava.iml
 *.war
 *.ear
