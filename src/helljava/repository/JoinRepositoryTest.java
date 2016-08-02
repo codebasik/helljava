@@ -14,11 +14,11 @@ public class JoinRepositoryTest {
 
     JoinRepository joinRepository = new JoinRepository();
 
-    @Before
-    public void initialize() {
-        User user = new User("222","222");
-        MemoryDB.userList.add(user);
-    }
+//    @Before
+//    public void initialize() {
+//        User user = new User("222","222");
+//        MemoryDB.userList.add(user);
+//    }
 
     @Test
     public void addUser() throws Exception {
