@@ -27,24 +27,24 @@ public class BoardController extends HttpServlet {
 
         request.setCharacterEncoding("UTF-8");
 
-        String searchWord = request.getParameter("searchWord");
-        String queryInput = request.getParameter("queryInput");
-
-        ArrayList<Board> list = MemoryDB.boardList;
-        for (Board board : list) {
-            System.out.println(board.toString());
-        }
-
         List<Board> boardList = boardService.boardList(request);
         request.setAttribute("boardList", boardList);
+
+        request.setAttribute("boardSearch", getBoardSearch(request));
+
+        RequestDispatcher view = request.getRequestDispatcher("/view/board/list.jsp");
+        view.forward(request,response);
+    }
+
+    private Map<String, String> getBoardSearch(HttpServletRequest request) {
+
+        String searchWord = request.getParameter("searchWord");
+        String queryInput = request.getParameter("queryInput");
 
         Map<String, String> boardSearch = new HashMap<>();
         boardSearch.put("searchWord", searchWord);
         boardSearch.put("queryInput", queryInput);
 
-        request.setAttribute("boardSearch", boardSearch);
-
-        RequestDispatcher view = request.getRequestDispatcher("/view/board/list.jsp");
-        view.forward(request,response);
+        return boardSearch;
     }
 }

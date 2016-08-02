@@ -7,7 +7,9 @@ import helljava.domain.Board;
 import javax.servlet.http.HttpServletRequest;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -44,9 +46,40 @@ public class BoardRepository {
     }
 
     public List<Board> findAll(String searchWord) {
-        return MemoryDB.boardList.stream()
-                .filter(b -> searchWord == null || b.getContent().contains(searchWord) || b.getUsername().contains(searchWord) || b.getTitle().contains(searchWord) || "".equals(searchWord))
-                .collect(Collectors.toList());
+
+        Connection conn = DBConnection.getConnection();
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+
+        List<Board> boardList = new ArrayList<Board>();
+
+        StringBuffer query = new StringBuffer();
+
+        try {
+
+            query.append("SELECT * FROM BOARD");
+
+            pstmt = conn.prepareStatement(query.toString());
+            rs = pstmt.executeQuery();
+
+            while (rs.next()) {
+                Board board = new Board();
+                board.setSeq(rs.getInt("BOARD_SEQ"));
+                board.setUsername(rs.getString("NAME"));
+                board.setTitle(rs.getString("TITLE"));
+                board.setContent(rs.getString("CONTENT"));
+
+                boardList.add(board);
+            }
+
+            return boardList;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new IllegalArgumentException("Error!");
+        } finally {
+            DBConnection.close(conn, pstmt, rs);
+        }
     }
 
     public List<Board> findbyContent(String searchWord) {

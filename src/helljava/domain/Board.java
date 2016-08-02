@@ -10,6 +10,9 @@ public class Board {
     private String content;
     private String username;
 
+    public Board() {
+    }
+
     public Board(int seq, String title, String content, String username) {
         this.seq = seq;
         this.title = title;

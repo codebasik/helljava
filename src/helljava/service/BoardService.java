@@ -19,18 +19,22 @@ public class BoardService {
 
     public List<Board> boardList(HttpServletRequest request) {
 
-        String searchWord = request.getParameter("searchWord");
-        String queryInput = request.getParameter("queryInput");
+        return boardRepository.findAll("");
 
-        if (NAME_QUERY.equals(queryInput)) {
-            return boardRepository.findbyName(searchWord);
-        } else if (CONTENT_QUERY.equals(queryInput)) {
-            return boardRepository.findbyContent(searchWord);
-        } else if (TITLE_QUERY.equals(queryInput)) {
-            return boardRepository.findbyTitle(searchWord);
-        } else {
-            return boardRepository.findAll(searchWord);
-        }
+
+
+//        String searchWord = request.getParameter("searchWord");
+//        String queryInput = request.getParameter("queryInput");
+//
+//        if (NAME_QUERY.equals(queryInput)) {
+//            return boardRepository.findbyName(searchWord);
+//        } else if (CONTENT_QUERY.equals(queryInput)) {
+//            return boardRepository.findbyContent(searchWord);
+//        } else if (TITLE_QUERY.equals(queryInput)) {
+//            return boardRepository.findbyTitle(searchWord);
+//        } else {
+//            return boardRepository.findAll(searchWord);
+//        }
     }
 
     public void addBoard(HttpServletRequest request) {
