@@ -79,6 +79,8 @@ public class UserRepository {
         } catch (SQLException e) {
             e.printStackTrace();
             throw new IllegalArgumentException("Error!");
+        } finally {
+            DBConnection.close(conn, pstmt, rs);
         }
     }
 
