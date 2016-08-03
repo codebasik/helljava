@@ -2,6 +2,7 @@ package helljava.web;
 
 import helljava.domain.Board;
 import helljava.repository.BoardRepository;
+import helljava.service.BoardService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -20,15 +21,12 @@ public class BoardDetailController extends HttpServlet {
 
         int seq = Integer.parseInt(request.getParameter("seq"));
 
-        BoardRepository boardRepository = new BoardRepository();
-        Board board = boardRepository.findbySeq(seq);
+        BoardService boardService = new BoardService();
+        Board board = boardService.getBoardDetail(seq);
 
         request.setAttribute("detail", board);
 
         RequestDispatcher view = request.getRequestDispatcher("/view/board/detail.jsp");
         view.forward(request,response);
-
-
-
     }
 }

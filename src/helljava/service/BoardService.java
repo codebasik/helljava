@@ -40,4 +40,8 @@ public class BoardService {
     public void addBoard(HttpServletRequest request) {
         boardRepository.write(request);
     }
+
+    public Board getBoardDetail(int seq) {
+        return boardRepository.findbySeq(seq);
+    }
 }

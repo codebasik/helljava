@@ -82,6 +82,39 @@ public class BoardRepository {
         }
     }
 
+    public Board findbySeq(int seq) {
+
+        Connection conn = DBConnection.getConnection();
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+
+        Board board = new Board();
+
+        try {
+
+            String query = "SELECT * FROM BOARD WHERE BOARD_SEQ=?";
+
+            pstmt = conn.prepareStatement(query);
+            pstmt.setInt(1, seq);
+            rs = pstmt.executeQuery();
+
+            while (rs.next()) {
+                board.setSeq(rs.getInt("BOARD_SEQ"));
+                board.setUsername(rs.getString("NAME"));
+                board.setTitle(rs.getString("TITLE"));
+                board.setContent(rs.getString("CONTENT"));
+            }
+
+            return board;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new IllegalArgumentException("findBySeq Error!");
+        } finally {
+            DBConnection.close(conn, pstmt, rs);
+        }
+    }
+
     public List<Board> findbyContent(String searchWord) {
         return MemoryDB.boardList.stream()
                 .filter(b -> b.getContent().contains(searchWord))
@@ -98,13 +131,6 @@ public class BoardRepository {
         return MemoryDB.boardList.stream()
                 .filter(b -> b.getTitle().contains(searchWord))
                 .collect(Collectors.toList());
-    }
-
-    public Board findbySeq(int seq) {
-        return MemoryDB.boardList.stream()
-                .filter(b -> b.getSeq() == seq)
-                .findFirst()
-                .orElse(null);
     }
 
     public int findByMaxSeq() {
