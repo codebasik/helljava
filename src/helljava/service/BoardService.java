@@ -44,4 +44,8 @@ public class BoardService {
     public Board getBoardDetail(int seq) {
         return boardRepository.findbySeq(seq);
     }
+
+    public void delete(int seq) {
+        boardRepository.deleteBoard(seq);
+    }
 }

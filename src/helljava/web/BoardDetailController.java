@@ -1,7 +1,6 @@
 package helljava.web;
 
 import helljava.domain.Board;
-import helljava.repository.BoardRepository;
 import helljava.service.BoardService;
 
 import javax.servlet.RequestDispatcher;
@@ -27,6 +26,6 @@ public class BoardDetailController extends HttpServlet {
         request.setAttribute("detail", board);
 
         RequestDispatcher view = request.getRequestDispatcher("/view/board/detail.jsp");
-        view.forward(request,response);
+        view.forward(request, response);
     }
 }

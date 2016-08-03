@@ -1,6 +1,5 @@
 package helljava.web;
 
-import helljava.DB.MemoryDB;
 import helljava.domain.Board;
 import helljava.service.BoardService;
 
@@ -10,7 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -33,7 +31,7 @@ public class BoardController extends HttpServlet {
         request.setAttribute("boardSearch", getBoardSearch(request));
 
         RequestDispatcher view = request.getRequestDispatcher("/view/board/list.jsp");
-        view.forward(request,response);
+        view.forward(request, response);
     }
 
     private Map<String, String> getBoardSearch(HttpServletRequest request) {

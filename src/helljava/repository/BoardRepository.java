@@ -146,7 +146,23 @@ public class BoardRepository {
     }
 
     public void deleteBoard(int seq) {
-        MemoryDB.boardList.removeIf(b -> b.getSeq() == seq);
+        Connection conn = DBConnection.getConnection();
+        PreparedStatement pstmt = null;
+
+        try {
+
+            String query = "DELETE BOARD WHERE BOARD_SEQ=?";
+
+            pstmt = conn.prepareStatement(query);
+            pstmt.setInt(1, seq);
+            pstmt.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new IllegalArgumentException("deleteBoard Error!");
+        } finally {
+            DBConnection.close(conn, pstmt);
+        }
     }
 
 }

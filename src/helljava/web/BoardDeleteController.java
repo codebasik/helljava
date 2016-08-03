@@ -1,8 +1,7 @@
 package helljava.web;
 
-import helljava.repository.BoardRepository;
+import helljava.service.BoardService;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,10 +15,11 @@ public class BoardDeleteController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         int seq = Integer.parseInt(request.getParameter("seq"));
 
-        BoardRepository boardRepository = new BoardRepository();
-        boardRepository.deleteBoard(seq);
+        BoardService boardService = new BoardService();
+        boardService.delete(seq);
 
         response.sendRedirect("/board.do");
 
