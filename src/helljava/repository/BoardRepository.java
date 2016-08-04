@@ -3,6 +3,7 @@ package helljava.repository;
 import helljava.DB.DBConnection;
 import helljava.DB.MemoryDB;
 import helljava.domain.Board;
+import org.h2.util.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.Connection;
@@ -25,12 +26,11 @@ public class BoardRepository {
         String content = request.getParameter("content");
 
         Connection conn = DBConnection.getConnection();
+        PreparedStatement pstmt = null;
 
         try {
 
             String query = "INSERT INTO BOARD (NAME, TITLE, CONTENT) VALUES (?,?,?)";
-
-            PreparedStatement pstmt = null;
             pstmt = conn.prepareStatement(query);
             pstmt.setString(1, userName);
             pstmt.setString(2, title);
@@ -42,10 +42,13 @@ public class BoardRepository {
         } catch (SQLException e) {
             e.printStackTrace();
             throw new IllegalArgumentException("write error!");
+        } finally {
+            DBConnection.close(conn,pstmt);
         }
     }
 
-    public List<Board> findAll(String searchWord) {
+    public List<Board> list(HttpServletRequest request) {
+
 
         Connection conn = DBConnection.getConnection();
         PreparedStatement pstmt = null;
@@ -57,7 +60,20 @@ public class BoardRepository {
 
         try {
 
-            query.append("SELECT * FROM BOARD");
+            query.append("SELECT * FROM BOARD WHERE 1=1 ");
+
+            String searchWord = request.getParameter("searchWord");
+            String queryInput = request.getParameter("queryInput");
+
+            if (!StringUtils.isNullOrEmpty(searchWord)) {
+                if ("ALL".equals(queryInput)) {
+                    query.append(("AND NAME LIKE '%"+searchWord+"%' or TITLE LIKE '%"+searchWord+"%' or CONTENT LIKE '%"+searchWord+"%'"));
+                } else {
+                    query.append("AND " + queryInput + " LIKE '%"+searchWord+"%'");
+                }
+            }
+
+            System.out.println("query = " + query.toString());
 
             pstmt = conn.prepareStatement(query.toString());
             rs = pstmt.executeQuery();

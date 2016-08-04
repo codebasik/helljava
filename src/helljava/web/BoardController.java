@@ -1,16 +1,16 @@
 package helljava.web;
 
-import helljava.domain.Board;
-import helljava.service.BoardService;
+import helljava.action.Board.*;
+import helljava.action.CommandAction;
 
-import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.net.URLDecoder;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -18,31 +18,40 @@ import java.util.Map;
  */
 public class BoardController extends HttpServlet {
 
-    BoardService boardService = new BoardService();
+    private Map boardCommand = new HashMap();
+
+    public void init(ServletConfig config) {
+        boardCommand.put("/board/list", new ListAction());
+        boardCommand.put("/board/detail", new DetailAction());
+        boardCommand.put("/board/delete", new DeleteAction());
+        boardCommand.put("/board/write", new WriteAction());
+    }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         request.setCharacterEncoding("UTF-8");
-
-        List<Board> boardList = boardService.boardList(request);
-        request.setAttribute("boardList", boardList);
-
-        request.setAttribute("boardSearch", getBoardSearch(request));
-
-        RequestDispatcher view = request.getRequestDispatcher("/view/board/list.jsp");
-        view.forward(request, response);
+        proRequest(request, response);
     }
 
-    private Map<String, String> getBoardSearch(HttpServletRequest request) {
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        System.out.println("request = " + URLDecoder.decode(request.getParameter("searchWord")));
+        proRequest(request, response);
+    }
 
-        String searchWord = request.getParameter("searchWord");
-        String queryInput = request.getParameter("queryInput");
+    protected void proRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        Map<String, String> boardSearch = new HashMap<>();
-        boardSearch.put("searchWord", searchWord);
-        boardSearch.put("queryInput", queryInput);
 
-        return boardSearch;
+        String cmd = request.getRequestURI();
+        CommandAction com = null;
+
+        try {
+            com = (CommandAction) boardCommand.get(cmd);
+            com.execute(request, response);
+        } catch(Throwable e) {
+            e.printStackTrace();
+        }
     }
 }
+

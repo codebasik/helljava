@@ -16,11 +16,13 @@
 </head>
 
 <body>
-
 <%
-    String s_user = (String) session.getAttribute("s_id");
+    String s_id = (String) session.getAttribute("s_id");
 %>
-
+<c:set var="s_id" value="<%=s_id%>"/>
+<c:if test="${empty s_id}">
+    <c:redirect url="/login.do"/>
+</c:if>
 <div class="container">
     <div class="header">
         <ul class="nav nav-pills pull-right">
@@ -43,8 +45,8 @@
         </div>
     </form>
     <div class="text-right">
-        <a href="/boardDelete.do?seq=${detail.seq}" class="btn btn-default">글삭제</a>
-        <a href="/board.do" class="btn btn-default">목록으로</a>
+        <a href="/board/delete?seq=${detail.seq}" class="btn btn-default">글삭제</a>
+        <a href="/board/list" class="btn btn-default">목록으로</a>
     </div>
 </div> <!-- /container -->
 <script src="/resources/assets/js/jquery.js"></script>

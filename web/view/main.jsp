@@ -30,7 +30,7 @@
     <div class="header">
         <ul class="nav nav-pills pull-right">
             <li class="active"><a href="/main.do">Home</a></li>
-            <li><a href="/board.do">글목록</a></li>
+            <li><a href="/board/list">글목록</a></li>
             <c:if test="${not empty s_user}">
                 <li><a href="/logout.do">로그아웃</a></li>
             </c:if>

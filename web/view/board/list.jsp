@@ -71,7 +71,7 @@
                 <tr>
                     <td>${list.seq}</td>
                     <td>${list.username}</td>
-                    <td><a href="/boardDet.do?seq=${list.seq}">${list.title}</td>
+                    <td><a href="/board/detail?seq=${list.seq}">${list.title}</td>
                     <td>${list.content}</td>
                 </tr>
             </c:forEach>
@@ -79,7 +79,7 @@
         </table>
     </div>
     <div class="text-right">
-        <a href="/write.do" class="btn btn-default">글쓰기</a>
+        <a href="/board/write" class="btn btn-default">글쓰기</a>
     </div>
 </div> <!-- /container -->
 </body>

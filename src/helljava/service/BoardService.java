@@ -11,30 +11,10 @@ import java.util.List;
  */
 public class BoardService {
 
-    public static final String NAME_QUERY = "NAME";
-    public static final String CONTENT_QUERY = "CONTENT";
-    public static final String TITLE_QUERY = "TITLE";
-
     BoardRepository boardRepository = new BoardRepository();
 
     public List<Board> boardList(HttpServletRequest request) {
-
-        return boardRepository.findAll("");
-
-
-
-//        String searchWord = request.getParameter("searchWord");
-//        String queryInput = request.getParameter("queryInput");
-//
-//        if (NAME_QUERY.equals(queryInput)) {
-//            return boardRepository.findbyName(searchWord);
-//        } else if (CONTENT_QUERY.equals(queryInput)) {
-//            return boardRepository.findbyContent(searchWord);
-//        } else if (TITLE_QUERY.equals(queryInput)) {
-//            return boardRepository.findbyTitle(searchWord);
-//        } else {
-//            return boardRepository.findAll(searchWord);
-//        }
+        return boardRepository.list(request);
     }
 
     public void addBoard(HttpServletRequest request) {

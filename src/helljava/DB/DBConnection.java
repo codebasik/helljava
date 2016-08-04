@@ -27,6 +27,17 @@ public class DBConnection {
         }
     }
 
+    public static void close(Connection conn)              // ps,conn 닫기 반복이라 뺌
+    {
+        if (conn != null) {
+            try {
+                conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
     public static void close(Connection conn, PreparedStatement pstmt)              // ps,conn 닫기 반복이라 뺌
     {
         if (pstmt != null) {
@@ -36,6 +47,7 @@ public class DBConnection {
                 e.printStackTrace();
             }
         }
+
         if (conn != null) {
             try {
                 conn.close();

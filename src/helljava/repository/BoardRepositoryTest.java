@@ -5,7 +5,6 @@ import helljava.domain.Board;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static junit.framework.Assert.assertEquals;
@@ -33,7 +32,7 @@ public class BoardRepositoryTest {
 
     @Test
     public void findAll() {
-        List<Board> all = boardRepository.findAll(null);
+        List<Board> all = boardRepository.list(null);
         assertEquals(4, all.size());
     }
 

@@ -16,10 +16,13 @@
 </head>
 
 <body>
-
 <%
     String s_id = (String) session.getAttribute("s_id");
 %>
+<c:set var="s_id" value="<%=s_id%>"/>
+<c:if test="${empty s_id}">
+    <c:redirect url="/login.do"/>
+</c:if>
 
 <div class="container">
     <div class="header">
@@ -28,7 +31,7 @@
         </ul>
         <h3 class="text-muted">글쓰기</h3>
     </div>
-    <form role="form" action="/write.do" method="post">
+    <form role="form" action="/board/write" method="post">
         <div class="form-group">
             <label for="username">이름</label>
             <input type="text" name="username" class="form-control" id="username" placeholder="이름을 입력하세요" value="<%=s_id%>" required>
